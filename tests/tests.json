@@ -1,0 +1,101 @@
+{
+    "result": {
+        "y": -41.80506,
+        "x": 146.03858
+    },
+    "tests": [{
+        "name": "UTM 1",
+        "query": "S55 420135E 5371420N",
+        "method":"UTM"
+    }, {
+        "name": "UTM 2",
+        "query": "55S E420135 N5371420",
+        "method":"UTM"
+    }, {
+        "name": "UTM 3 (Comma)",
+        "query": "55S,E420135,N5371420",
+        "method":"UTM"
+    }, {
+        "name": "UTM 3 (Semi Colon)",
+        "query": "55S;E420135;N5371420",
+        "method":"UTM"
+    }, {
+        "name": "DMS 1",
+        "query": "146° 2' 18.9168\" -41° 48' 18.2226\"",
+    }, {
+        "name": "DMS 2",
+        "query": "E146° 2' 18.9168\" S41° 48' 18.2226\"",
+        "method":"DMS"
+    }, {
+        "name": "DMS 3",
+        "query": "146° 2' 18.9168\"E 41° 48' 18.2226\"S",
+        "method":"DMS"
+    }, {
+        "name": "DMS 4",
+        "query": "146 2 18.9168 -41 48 18.2226",
+        "method":"DMS"
+    }, {
+        "name": "DMS 5",
+        "query": "E146 2 18.9168 S41 48 18.2226",
+        "method":"DMS"
+    }, {
+        "name": "DMS 6",
+        "query": "146 2 18.9168E 41 48 18.2226S",
+        "method":"DMS"
+    }, {
+        "name": "DM 1",
+        "query": "146° 2.3153' -41° 48.3037'",
+        "method":"DM"
+    }, {
+        "name": "DM 2",
+        "query": "E146° 2.3153' S41° 48.3037'",
+        "method":"DM"
+    }, {
+        "name": "DM 3",
+        "query": "146° 2.3153'E 41° 48.3037'S",
+        "method":"DM"
+    }, {
+        "name": "DM 4",
+        "query": "146° 2.3153' -41° 48.3037'",
+        "method":"DM"
+    }, {
+        "name": "DM 5",
+        "query": "146 2.3153 -41 48.3037",
+        "method":"DM"
+    }, {
+        "name": "DM 6",
+        "query": "146 2.3153E 41 48.3037S",
+        "method":"DM"
+    }, {
+        "name": "DD 1",
+        "query": "146.038588 -41.805062",
+        "method":"DD"
+    }, {
+        "name": "DD 2",
+        "query": "E146.038588 S41.805062",
+        "method":"DD"
+    }, {
+        "name": "DD 3",
+        "query": "146.038588E 41.805062S",
+        "method":"DD"
+    }, {
+        "name": "Test Fail 1 (Bad Query)",
+        "query": "146.038588E 41.805062S  sssd 23223 3323 2 323 23 2 323 23 2 32 32 32 3",
+        "method":"UTM"
+    }
+    , {
+        "name": "Test Fail 2 (Bad Lat)",
+        "query": "146.038588E 41.805062",
+        "method":"DD"
+    }
+    , {
+        "name": "Test Fail 3 (Bad Lng)",
+        "query": "-146.038588 41.805062S",
+        "method":"DD"
+    }, {
+        "name": "Test Fail 4 (Bad Method)",
+        "query": "146.038588E 41.805062",
+        "method":"DMS"
+    }
+]
+}
