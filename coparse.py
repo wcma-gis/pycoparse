@@ -60,7 +60,7 @@ def parse( query, debug=False):
     # Check point
     if pt['error']:
         result['success'] = False
-        result['error'] = pt.error_msg
+        result['error'] = pt['error_msg']
         return result
     else:
         result['success'] = True
